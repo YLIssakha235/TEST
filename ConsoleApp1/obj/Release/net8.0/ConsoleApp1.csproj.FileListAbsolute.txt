@@ -1,0 +1,15 @@
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.sourcelink.json
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\bin\Release\net8.0\ConsoleApp1.exe
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\bin\Release\net8.0\ConsoleApp1.deps.json
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\bin\Release\net8.0\ConsoleApp1.runtimeconfig.json
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\bin\Release\net8.0\ConsoleApp1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\bin\Release\net8.0\ConsoleApp1.pdb
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\refint\ConsoleApp1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.pdb
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\Programmation orientée objet\TUTO\ConsoleApp1\obj\Release\net8.0\ref\ConsoleApp1.dll
