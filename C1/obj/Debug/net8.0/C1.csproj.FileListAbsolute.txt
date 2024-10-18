@@ -1,0 +1,14 @@
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\bin\Debug\net8.0\C1.exe
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\bin\Debug\net8.0\C1.deps.json
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\bin\Debug\net8.0\C1.runtimeconfig.json
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\bin\Debug\net8.0\C1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\bin\Debug\net8.0\C1.pdb
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.AssemblyInfoInputs.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.AssemblyInfo.cs
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.csproj.CoreCompileInputs.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\refint\C1.dll
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.pdb
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\C1.genruntimeconfig.cache
+C:\Users\yayal\OneDrive - ECAM\Bureau\ECAM\BAC3\Software engineering 1\POO_\TUTO\C1\obj\Debug\net8.0\ref\C1.dll
