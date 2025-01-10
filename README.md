@@ -94,10 +94,10 @@ Structure de données pouvant contenir plusieurs éléments. Chaque élément po
 - Ajout et suppression efficaces
 - Utilisation efficace de la mémoire
 
- ### Inconvenients 
- - Accès sequentiel
- - Surcharge mémoire
- - manipulation comlplexe
+### Inconvenients 
+- Accès sequentiel
+- Surcharge mémoire
+- manipulation comlplexe
    
 ### Ajout et retrait d'un élément
 
@@ -131,9 +131,26 @@ Lorsque chaque élément d’une liste pointe à la fois vers l’élément suiv
 ### Inconvénients :
 - Surchage memoire
 
-<h2 id="circular-list">6.2 Circular List</h2>
-<p><strong>Principe :</strong> Une liste cyclique (ou circulaire) est créée lorsque le dernier élément possède une référence vers le premier élément (si la liste est doublement chaînée, alors le premier élément possède aussi une référence vers le dernier). L’utilisation de ce type de liste requiert des précautions pour éviter des parcours infinis, par exemple, lors d’une recherche vaine d’élément.</p>
+## 8) Listes circulaires chaînées 
+
+### Principe 
+Une liste circulaire simplement chainée est une liste où:
+- le dernier noeud pointe vers le premier, formant un cycle.
+- le parcours peut se faire de manière continue sans atteindre NULL.
 <p><img src="https://i.ibb.co/TTnkpK6/Circular-linked-list.png" alt="enter image description here"></p>
+
+### Avantages :
+- Pas de fin explicite
+- Insertion rapide
+- Optimisation mémoire
+  
+### Inconvénients :
+- Complexité de gestion
+- Parcours infini
+- Difficulté à identifier le début
+
+
+
 <h1 id="sparse-matrix">7. Sparse Matrix</h1>
 <p><strong>Le problème :</strong>  Ce sont par définition de grands tableaux contenant un grand nombre de cases vides. Un problème de gaspillage de place apparait lorsque l’on essaye de regrouper un grand nombre d’informations et de catégories dans un seul tableau. Toutes les cases ne peuvent être remplies.</p>
 <p><strong>Solutions :</strong></p>
