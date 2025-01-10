@@ -170,27 +170,26 @@ L'idée principale est de stocker uniquement les éléments non nuls et leurs in
   
 
 
-## 9) Matrices éparses (Sparse Tables) 
+## 10) Stack et Queue 
 
-<h1 id="stack-and-queue">8. Stack and Queue</h1>
-<p><strong>Principe :</strong> Variante des listes chainées où l’on ne peut ajouter des nouveaux éléments seulement en début ou en fin. Ils possèdent la même structure avec un pointeur vers l’élément suivant dont le dernier pointe vers <code>NULL</code>.</p>
-<ul>
-<li>
-<p><strong>Piles (Stack) :</strong> <code>Last In First Out</code>.<br>
+### Principe 
+Variante des listes chainées où l’on ne peut ajouter des nouveaux éléments seulement en début ou en fin. Ils possèdent la même structure avec un pointeur vers l’élément suivant dont le dernier pointe vers <code>NULL</code>.
+
+ ### Piles (Stack) : <code>Last In First Out</code>
 <img src="https://i.ibb.co/SRpYDKk/Piles.png" alt="enter image description here"><br>
-<strong>Implementation :</strong><br>
-<strong>Vecteur :</strong> Pour utiliser le vecteur, il faudra prévoir une case pour mémoriser l’indice de la dernière valeur de la pile. La taille de la pile doit être connue lors de la création et est donc fixe.<br>
-<strong>Liste :</strong> Une liste simplement chainée dans laquelle on va ajouter/retirer en début de liste. Aucun parcours de la liste n’est nécessaire.</p>
+### Implementation 
+- Vecteur : Pour utiliser le vecteur, il faudra prévoir une case pour mémoriser l’indice de la dernière valeur de la pile. La taille de la pile doit être connue lors de la création et est donc fixe.
+- Liste : Une liste simplement chainée dans laquelle on va ajouter/retirer en début de liste. Aucun parcours de la liste n’est nécessaire.
 </li>
-<li>
-<p><strong>Files (Queue) :</strong> <code>First In First Out</code>.<br>
+
+### Files (Queue) : <code>First In First Out</code>
 <img src="https://i.ibb.co/vHYdBc4/Files.png" alt="enter image description here"><br>
-<strong>Implementation :</strong><br>
-<strong>Vecteur :</strong> Le vecteur doit être circulaire. Grâce aux pointeurs <code>last</code> et <code>first</code> on va pouvoir ajouter en fin et retirer en début.  La taille doit être connue lors de la création et est donc fixe.<br>
+
+### Implementation
+- Vecteur :Le vecteur doit être circulaire. Grâce aux pointeurs <code>last</code> et <code>first</code> on va pouvoir ajouter en fin et retirer en début.  La taille doit être connue lors de la création et est donc fixe.
 <img src="https://i.ibb.co/xfBTjyG/Implem-Vectoriel-File.png" alt="enter image description here"><br>
-<strong>Liste :</strong> Une liste simplement chainée dans laquelle on va pouvoir ajouter en fin et enlever en début de liste.</p>
-</li>
-</ul>
+- Liste : Une liste simplement chainée dans laquelle on va pouvoir ajouter en fin et enlever en début de liste.
+
 <h1 id="binary-search-trees-1">9. Binary Search Trees (1)</h1>
 <p><strong>Principe :</strong> Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit trié, sinon aucun intérêt. On insère les éléments dans l’arbre dans l’ordre dans lequel ils arrivent et lorsque la case n’est pas libre, si on est plus petit que la case on place l’élément à gauche et inversement à droite. Chaque élément a un pointeur vers ses enfants de gauche et droite. Le pointeur est <code>NULL</code> s’il n’a pas d’enfant.</p>
 <p><img src="https://i.ibb.co/BKF6Ny6/Binary-Search-Tree.png" alt="enter image description here"></p>
