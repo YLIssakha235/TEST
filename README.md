@@ -4,9 +4,16 @@
 ---
 
 </ul>
-<h1 id="selection-and-insertion-sorts">1. Selection and Insertion Sorts</h1>
-<h2 id="selection">1.1 Selection</h2>
-<p><strong>Principe :</strong> On recherche la position de la plus petite valeur de clé et on vient échanger sa position avec le premier élément. On considère ensuite uniquement la partie du vecteur non triée et on recommence jusqu’à ce que la liste soit complètement triée.</p>
+<h1 id="selection-and-insertion-sorts"> les 5 types de Tri </h1>
+<h2 id="selection">1) Tri par Selection</h2>
+<p><strong>Principe :</strong>.</p
+  * Trouver le plus petit élément du tableau
+  * Le placer en première position
+  * Répéter le processus pour le reste du tableau
+<p><strong>Avantages:</strong>.</p
+  * Facile à comprendre et à coder
+  * Nombre d'échange minimal (n-1)
+  * convient lorsque les échanges sont coûteux
 <p><img src="https://i.ibb.co/gDKzKkn/Selection-Sort.png" alt="Selection Sort"></p>
 <p><strong>Complexité :</strong> O(n²) Maximum N²/2 comparaisons et N-1 échanges.</p>
 <p><strong>Avantage :</strong> Le nombre d’échanges est intéressant si le temps est un argument.</p>
