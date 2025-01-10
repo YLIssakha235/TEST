@@ -197,7 +197,13 @@ Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit
 <p><img src="https://i.ibb.co/BKF6Ny6/Binary-Search-Tree.png" alt="enter image description here"></p>
 
 ### Insertion d'un élément 
-<p><strong>Insertion d’un élément :</strong>  Comme expliqué dans le principe de fonctionnement, lorsqu’on insère un nouvel élément on vient le placer tel que si la racine est occupée, il ira à droite si &gt; root ou à gauche si &lt; root. Et si la racine est libre il prendra tout simplement sa place.</p>
+-	Commencer à la racine 
+-	Si l’élément est inférieur à la clé du nœud courant : aller à gauche
+-	Si l’élément est supérieur : aller à droite.
+-	Si le sous-arbre correspond est vide : insérer l’élément à cet endroit
+
+### Effacement d'un élément 
+
 <p><strong>Supression d’un élément :</strong>  Nous avons 3 situations :</p>
 <ul>
 <li>En bout d’arbre c’est assez facile, il suffit de modifier le pointeur du parent du dernier noeud pour pointer vers  <code>NULL</code>.<br>
