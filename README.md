@@ -190,9 +190,13 @@ Variante des listes chainées où l’on ne peut ajouter des nouveaux éléments
 <img src="https://i.ibb.co/xfBTjyG/Implem-Vectoriel-File.png" alt="enter image description here"><br>
 - Liste : Une liste simplement chainée dans laquelle on va pouvoir ajouter en fin et enlever en début de liste.
 
-<h1 id="binary-search-trees-1">9. Binary Search Trees (1)</h1>
-<p><strong>Principe :</strong> Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit trié, sinon aucun intérêt. On insère les éléments dans l’arbre dans l’ordre dans lequel ils arrivent et lorsque la case n’est pas libre, si on est plus petit que la case on place l’élément à gauche et inversement à droite. Chaque élément a un pointeur vers ses enfants de gauche et droite. Le pointeur est <code>NULL</code> s’il n’a pas d’enfant.</p>
+## 11) Arbres binaires triés (binary search tress - BST)
+
+### Principe
+Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit trié, sinon aucun intérêt. On insère les éléments dans l’arbre dans l’ordre dans lequel ils arrivent et lorsque la case n’est pas libre, si on est plus petit que la case on place l’élément à gauche et inversement à droite. Chaque élément a un pointeur vers ses enfants de gauche et droite. Le pointeur est <code>NULL</code> s’il n’a pas d’enfant.
 <p><img src="https://i.ibb.co/BKF6Ny6/Binary-Search-Tree.png" alt="enter image description here"></p>
+
+### Insertion d'un élément 
 <p><strong>Insertion d’un élément :</strong>  Comme expliqué dans le principe de fonctionnement, lorsqu’on insère un nouvel élément on vient le placer tel que si la racine est occupée, il ira à droite si &gt; root ou à gauche si &lt; root. Et si la racine est libre il prendra tout simplement sa place.</p>
 <p><strong>Supression d’un élément :</strong>  Nous avons 3 situations :</p>
 <ul>
