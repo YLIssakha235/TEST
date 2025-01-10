@@ -1,52 +1,90 @@
----
+# Les 5 types de Tri
 
+## 1) Tri par Sélection
+### Principe
+- Trouver le plus petit élément du tableau.
+- Le placer en première position.
+- Répéter le processus pour le reste du tableau.
 
----
-
-</ul>
-## id="selection-and-insertion-sorts"> les 5 types de Tri 
-<h2 id="selection">1) Tri par Selection</h2>
-<p><strong>Principe :</strong>
-  *Trouver le plus petit élément du tableau
-  * Le placer en première position
-  * Répéter le processus pour le reste du tableau
- .</p
-<p><strong>Avantages:</strong>.</p
-  * Facile à comprendre et à coder
-  * Nombre d'échange minimal (n-1)
-  * convient lorsque les échanges sont coûteux
 <p><img src="https://i.ibb.co/gDKzKkn/Selection-Sort.png" alt="Selection Sort"></p>
-<p><strong>Complexité :</strong> O(n²) Maximum N²/2 comparaisons et N-1 échanges.</p>
-<p><strong>Avantage :</strong> Le nombre d’échanges est intéressant si le temps est un argument.</p>
-<h2 id="insertion">1.2 Insertion</h2>
-<p><strong>Principe :</strong> On considère le vecteur en deux parties : triée et non-triée. La partie triée ne contient au départ que la première valeur du tableau. On vient prendre la première valeur de la partie non triée et l’insérer au bon endroit dans la partie triée. Cela consiste à faire une place dans la partie triée en décalant d’une position les éléments plus grands que la valeur à insérer.</p>
+
+### Avantages
+- Facile à comprendre et à coder.
+- Nombre minimal d’échanges (n-1).
+- Convient lorsque les échanges sont coûteux.
+
+### Inconvénients
+- Complexité élevée (O(n²)), peu performant sur de grandes données.
+- Inefficace si les données sont déjà triées ou presque triées.
+
+## 2) Tri par Insertion
+### Principe
+- Diviser le tableau en deux parties : triée et non triée.
+- Insérer chaque élément de la partie non triée à sa position correcte dans la partie triée.
+- Répéter jusqu’à ce que tout le tableau soit trié.
+
 <p><img src="https://i.ibb.co/W2WhCzy/Insertion-Sort.png" alt="Insertion Sort"></p>
-<p><strong>Complexité :</strong> O(n²)</p>
-<ul>
-<li>En moyenne : N²/4 comparaisons et N²/2 échanges</li>
-<li>Worst case : N²/2 comparaison et N²/2 échanges</li>
-<li>Best case : N comparaisons et 0 échange (si le vecteur était déjà trié)</li>
-</ul>
-<p><strong>Avantage :</strong> Imbattable si le vecteur est déjà trié au départ et très rapide si le vecteur à trier est partiellement trié.</p>
-<h1 id="shell-sort">2. Shell Sort</h1>
-<p><strong>Principe :</strong> Le tri shell se base sur le tri par insertion en essayant de minimiser son défaut de complexité <code>O(n²)</code>. Le principe sera de diviser le vecteur en <code>h sous-vecteurs</code> afin d’effectuer des tris par sélection sur des plus petites portions. Une fois les <code>h tris</code> réalisé on vient reformer le vecteur initial qui sera dans un état un peu plus trié. Comme le tri par sélection est plus efficace dans ces situations-là, on peut obtenir une complexité entre <code>O(n²)</code> et <code>O(n log²(n))</code>.</p>
+
+### Avantages
+- Simple à implémenter.
+- Très rapide (O(n)) si le tableau est déjà trié ou presque trié.
+
+### Inconvénients
+- Complexité (O(n²)) dans le pire des cas (données inversées).
+    - En moyenne : N²/4 comparaisons et N²/2 échanges
+    - Worst case : N²/2 comparaison et N²/2 échanges
+    - Best case : N comparaisons et 0 échange (si le vecteur était déjà trié)
+- Nécessite beaucoup de décalages dans un tableau.
+
+## 3) Tri Shell
+### Principe
+- Extension du tri par insertion.
+- Trie des sous-vecteurs formés en sélectionnant des éléments espacés par une valeur h.
+- Diminue progressivement h pour affiner le tri.
 <p><img src="https://i.ibb.co/jyBKKyC/Shell-sort.png" alt="enter image description here"></p>
-<p><strong>Choix de la valeur h :</strong>  Habituellement, on utilise une formule pour calculer les valeurs de  <code>h</code>  des passes successives. Dans la pratique, on utilise une série de  <code>h</code>  décroissant en choisissant des valeurs qui assurent un bon brassage des données à trier. Il faut éviter 1, 2, 4, 8, 16 … ou 1, 3, 9, 27 … parce qu’avant la dernière passe, les données des deux ou trois sous-vecteurs de la passe précédente n’ont jamais été confrontées et il reste trop de désordre pour la dernière passe.</p>
-<p><strong>Avantages :</strong>  Plus efficace que le tri par insertion classique.</p>
-<p><strong>Inconvénients :</strong>  Algorithme plus complexe. Pas aussi efficace que d’autres méthodes de tris comme  <code>QuickSort</code>.</p>
-<h1 id="heap-sort">3. Heap Sort</h1>
-<p><strong>Principe :</strong>  Se base sur une vision arbre binaire du vecteur. Le premier élément du vecteur est la racine de l’arbre virtuel (indice 0). Le fils gauche se trouve à l’indice 1 et le fils droit à l’indice 2. Le fils gauche du fils gauche de la racine est en position 3 et le fils droit du fils gauche de la racine est à l’indice 4, etc. Si on prend un élément d’indice i, le fils gauche se trouve à l’indice  <code>2*i+1</code>  et le fils droit à l’indice  <code>2*i+2</code>. De même, le père de l’élément à la position i sera à la position  <code>(i-1)/2</code>  (division entière évidemment). On peut donc considérer un vecteur comme étant un arbre binaire que l’on peut parcourir en descendant ou en montant. Un Heap (tas en français) est un arbre qui respecte  <strong>une seule règle :</strong>  <code>le père est toujours plus grand que ses deux fils.</code></p>
-<p>Les étapes 2 et 3 ci-dessous sont répétées jusqu’à ce que le vecteur soit complètement trié :</p>
-<ol>
-<li>Le tri Heap consistera à transformer le vecteur cet arbre virtuel en respectant la propriété Heap.</li>
-<li>Le plus grand élément du vecteur est alors à la position 0 et on l’échange avec la dernière position du vecteur, il est à sa place.</li>
-<li>Après chaque échange on restaure. Ce qui consiste à refaire respecter la propriété Heap dans notre arbre, mais sans prendre en compte le dernier élément qui lui est correctement placé. Après restauration, l’élément à l’indice 0 est le nouveau plus grand du vecteur, on l’échange avec l’avant-dernière position du vecteur et il est à sa place.</li>
-</ol>
+
+### Avantages
+- Réduit significativement la complexité du tri par insertion (O(n^1.5) à O(n log² n)).
+- Très performant pour des données désordonnées.
+
+### Inconvénients
+- Dépend du choix des incréments (h), ce qui peut compliquer l’implémentation.
+- Moins performant que QuickSort dans certaines situations.
+
+## 4) Heap Sort (Tri par Tas)
+### Principe
+- Transformer le tableau en un tas (structure en arbre binaire).
+- Extraire le plus grand élément (racine) et le placer à la fin du tableau.
+- Répéter en ajustant le tas pour le reste du tableau.
+
 <p><img src="https://i.ibb.co/fY8rMXW/Heap-Sort.png" alt="enter image description here"></p>
-<h1 id="quicksort">4. QuickSort</h1>
-<p><strong>Principe :</strong>  Consiste à choisir, parmi les données à trier, une valeur pivot et à s’arranger pour organiser les données selon quelles sont plus petites ou plus grande que cette valeur. À la fin de ce processus, le tableau à trier est virtuellement divisé en deux parties, d’une part les  <code>x valeurs inférieures</code>  au pivot et d’autre part les  <code>y valeurs supérieures</code>  à ce pivot. On recommence ensuite ce processus sur les  <code>x premières valeurs</code>  (choix d’une nouvelle valeur pivot), ce qui conduira à  <em>"couper</em>" en deux ce demi-tableau et ainsi de suite jusqu’à ce que la taille du  <em>"demi-demi-…-demi-tableau</em>  ne contienne plus qu’un seul élément. On fait la même chose sur les  <code>y valeurs</code>  résultant du premier découpage. La vidéo  <a href="https://youtu.be/PgBzjlCcFvc?t=30">suivante</a>  illustre le principe.</p>
-<p><strong>Avantages :</strong>  Complexité  <code>O(n log(n))</code>  ce qui est optimal pour un tri par comparaison. Dans le pire des cas, la complexité est quadratique. Efficace pour de larges quantités de données.</p>
-<p><strong>Inconvénients :</strong>  Ne tire aucun avantage à ce que le vecteur soit en partie trié.</p>
+
+### Avantages
+- Complexité garantie O(n log n), indépendamment des données.
+- Pas besoin de mémoire supplémentaire (tri en place).
+
+### Inconvénients
+- Pas stable (les éléments égaux peuvent changer d’ordre).
+- Moins rapide que QuickSort dans le cas moyen.
+
+## 5) QuickSort
+### Principe
+- Choisir un pivot dans le tableau.
+- Réorganiser le tableau pour que les éléments inférieurs au pivot soient à gauche et les éléments supérieurs à droite.
+- Répéter le processus sur les sous-tableaux à gauche et à droite du pivot.
+
+### Avantages
+- Très rapide en moyenne (O(n log n)).
+- Bien adapté aux très grandes données.
+- Peu gourmand en mémoire si bien implémenté.
+
+### Inconvénients
+- Complexité O(n²) dans le pire cas (pivot mal choisi).
+- Non stable.
+
+
+
+
 <h1 id="single-linked-list">5. Single Linked List</h1>
 <p><strong>Principe :</strong>  Structure de données pouvant contenir plusieurs éléments. Chaque élément possède un pointeur vers l’élément suivant. La liste est un pointeur vers le premier élément de la liste appelé  <strong>“Head”</strong>. Le dernier élément pointe vers une adresse spécifique pour signifier la fin de la liste,  <strong>“Tail”</strong>.</p>
 <p><strong>Avantage :</strong>  Permet de stocker des valeurs de même type, mais a une taille variable même après création. On peut y insérer ou supprimer des éléments.</p>
