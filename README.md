@@ -203,6 +203,15 @@ Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit
 -	Si le sous-arbre correspond est vide : insérer l’élément à cet endroit
 
 ### Effacement d'un élément 
+-	Nœud sans enfant : supprimer directement 
+-	Nœud avec un seul enfant : remplacer par cet enfant
+-	Nœud avec deux enfants :  trouver le successeur (ou prédécesseur) dans l’ordre ; remplacer la clé du nœud par celle du successeur ; supprimer le successeur.
+
+### Mode de parcours
+- infixe (in-order)
+- prefixe (pré-order)
+- Postfixe (Post-order)
+- Par niveau (level-order)
 
 <p><strong>Supression d’un élément :</strong>  Nous avons 3 situations :</p>
 <ul>
@@ -222,62 +231,75 @@ Lorsqu’on construit un arbre binaire on le fait de manière à ce qu’il soit
 </ol>
 <p>Une fois les trois actions  <code>LVR</code>  exécuté pour l’élément le plus de l’arbre on passe à l’élément qui le précède. On peut directement passer à l’action  <code>VISIT</code>  puisque celui-ci à déjà utilisé son  <code>LEFT</code>. Il exécutera ensuite son  <code>RIGHT</code>  pour descendre dans ses enfants. Ces derniers exécuteront leur  <code>LVR</code>  jusqu’a remonter chez son parent.</p>
 <p>On remonte ainsi jusqu’à la racine qui une fois “visité” passera à son  <code>RIGHT</code>  pour à son tour faire exécuter les  <code>LVR</code>  de tous ses enfants de droite.</p>
-<h1 id="binary-search-trees-2">10. Binary Search Trees (2)</h1>
-<p><strong>Manipulation par rotation :</strong></p>
-<ul>
-<li>On peut effectuer des rotations à droite, de manière à ce que le parent (avec son enfant de droite  <code>R</code>) vienne s’accrocher à la droite de son enfant de gauche en  <code>Q</code>  sur la figure (a). Ainsi l’enfant de gauche peut prendre la place du père. Cette manière de procéder permet de garder un arbre trié.<br>
+
+## 12) Arbres binaires triés (binary search tress)
+
+### Problème de désiquilibre 
+-	Après des insertions ou suppressions, un arbre binaire trié peut devenir déséquilibré.
+-	Cela augmente la hauteur de certaines branches, dégradant la performance à O(n).
+
+<img src="https://i.ibb.co/VDpmv1D/D-s-quilibre.png" alt="enter image description here">
+
+### Méthodes d'équilibre par rotations
+- Rotation simple
+- Rotation double
+
+### Abres équilibrés
+-	AVL : maintiennent une différence de hauteur maximale de 1 entre sous-arbres
+-	Rouge-Noir : Garantissent un équilibre partiel avec des règles basées sur la couleur des nœuds 
+
 <img src="https://i.ibb.co/bKCFTDH/Rotation-droite.png" alt="enter image description here"></li>
-<li>On peut effectuer des rotations à gauche en faisant l’opposé des actions décrites plus haut.</li>
-</ul>
-<p><strong>Déséquilibrage :</strong></p>
-<ul>
-<li><strong>Problème :</strong>  Lorsqu’on manipule l’arbre en y insérant/supprimant des éléments on peut introduire un déséquilibre dû au nombre de noeuds différent à gauche et à droite d’un parent.<br>
-<img src="https://i.ibb.co/VDpmv1D/D-s-quilibre.png" alt="enter image description here"></li>
-<li><strong>Solutions :</strong>  Il existe différentes méthodes d’équilibrage à base de rotation comme les arbres  <a href="#11-avl-trees">AVL</a></li>
-</ul>
-<h1 id="avl-trees">11. AVL Trees</h1>
-<p><strong>Principe :</strong> c’est un algorithme qui permet de rendre un arbre équilibré en associant aux différents noeuds (en plus des valeurs) des niveaux de désiquilibrede l’arbre. <code>+n</code> et <code>-n</code> lors d’un déséquilibre respectivement à droite et à gauche ou encore <code>0</code> lorsque le noeud est équilibré. À partir d’un déséquilibre de <code>+2</code>ou <code>-2</code>, l’arbre va effectuer une rotation classique afin de rééquilibrer.</p>
-<p><img src="https://i.ibb.co/JBm55Gq/AVL-Trees.png" alt="enter image description here"></p>
-<p><strong>Utilité :</strong> Permet de réaliser des insertions, suppressions et recherche de complexité logarithmique O(log(n)). AVL assure un équilibrage de maximum 2 niveaux.</p>
-<h1 id="data-compression">12. Data compression</h1>
-<h2 id="run-length-encoding">12.1 Run-length Encoding</h2>
-<p>Lorsque l’on code par plage, on va essayer de noter plusieurs caractères qui se suivent d’une manière différente.</p>
-<ul>
-<li>En comptant le nombre de répétitions d’un caractère, un message composé uniquement de lettre  <code>AAAABBAAACCCCCB</code>  devient  <code>4A2B3A5CB</code>. On constate un gain de place évident.</li>
-<li>Si le message contient des caractères alphanumériques, on vient placer un caractère d’échappement (Escape)  <code>Z</code>  devant un chiffre pour signifier qu’il indique le nombre d’apparitions de la lettre juste à côte. Le message  <code>4AAAA5BBB</code>  devient  <code>4</code><em>Z4</em><code>A5BBB</code>. On constate avec cette méthode que si une lettre se répète moins de 3 fois, on va préférer garder la répétition.  <code>BBB</code>  n’a aucun intérêt à devenir  <code>Z3B</code>.</li>
-</ul>
-<h2 id="variable-length-code">12.2 Variable-length Code</h2>
-<p>On va coder des caractères très fréquents sur moins de bits que des caractères plus rares. En prenant le cas du français on codera la lettre <code>E</code> sur 4 bits car très susceptible d’apparaitre et la lettre <code>Z</code> sur 13 bits, car beaucoup moins susceptible d’apparaître. On optimise ainsi l’espace.</p>
-<h1 id="absract-data-type-adt">13. Absract Data Type (ADT)</h1>
-<p><strong>Définition :</strong>  L’objectif d’un type abstrait de données (TAD, ou ADT en anglais) est de cacher les détails d’implémentation de la structure de données, tout en modélisant le monde réel. Les changements d’implémentation de TAD doivent être indépendants du reste du programme, et celui-ci est autodocumenté. Les opérations réalisables avec chaque TAD sont définies dans son interface. Les noms de TAD sont représentatifs de leurs fonctionnalités ; Nous en avons déjà rencontré quelques-uns : par exemple la pile et la file qui peuvent s’implémenter de différentes façons.</p>
-<p><strong>Exemples de TAD :</strong><br>
-<strong>1. Deque :</strong>  Est une  <code>file</code>  à deux bouts, une séquence d’éléments à laquelle on peut ajouter et enlever aux deux extrémités. Son interface propose au minimum les méthodes suivantes :</p>
-<ul>
-<li>IsEmpty()</li>
-<li>insertFirst(element)</li>
-<li>insertLast(element)</li>
-<li>removeFirst()</li>
-<li>removeLast()<br>
-L’implémentation peut se faire avec une liste simplement ou doublement chaînée avec pointeur de fin de liste.</li>
-</ul>
-<p><strong>2. Dictionnaire :</strong>  Permet le stockage de paires clé-valeur, mais une clé peut être associée à plusieurs valeurs. Son interface propose au minimum les méthodes suivantes :</p>
-<ul>
-<li>Size() : nbr de paires clé-valeur</li>
-<li>isEmpty() pas une seule clé-valeur</li>
-<li>find(k) renvoie une valeur associée à la clé k (null si k n’existe pas dans le dictionnaire)</li>
-<li>findAll(k) renvoie un itérateur sur les valeurs associées à la clé k (null si k n’existe pas dans le dictionnaire)</li>
-<li>insert(k,v) ajoute la paire clé-valeur (k,v)</li>
-<li>remove(k,v) supprime la clé-valeur</li>
-<li>entries() est un itérateur sur les paires clé-valeurs<br>
-L’implémentation peut se faire avec une liste chaînée ordonnée ou non ou une liste à saut (skipList).</li>
-</ul>
-<h1 id="error-detecting-codes">14. Error-Detecting Codes</h1>
-<p><strong>Principe :</strong>  Afin de garantir la fiabilité des informations lors d’une transmission de données, on y introduit suffisamment de redondance par un codage de correction.</p>
-<p>Le cas le plus simple est l’utilisation d’un bit de parité. On ajoute pour chaque bloc de n bits un bit qui est la somme (sans report) des bits du bloc (1+1=0). Ce système permet de détecter si un  <code>nombre impair</code>  de bit est  <code>incorrect</code>  dans le bloc. En cas de nombre pair d’erreurs, le bit de parité sera correct. Ce système consiste donc à ajouter au bloc de bits à transmettre le modulo 2 (0 ou 1) de ce bloc.</p>
-<p><strong>Améliorer le nombre de détections :</strong>  Si l’on consacre 2 bits à la détection d’erreur, on peut utiliser un modulo 4 (0, 1, 2 ou 3 càd en binaire 00, 01, 10 ou 11). Si au décodage, le modulo 4 est correct, cela signifie qu’il y a 0, 4, 8… erreurs de transmission. Le 0 étant le plus probable surtout si le bloc transmis est de petite taille.</p>
-<p><strong>En cas de détection :</strong>  On peut constater que cette technique permet de détecter des erreurs, mais pas de les corriger. Si le code détecteur est assez développé il peut corriger l’erreur comme le  <code>codage de Hamming</code>. Autrement une solution plus simple consiste à demander de renvoyer le message.</p>
-<h1 id="raid-arrays">15. RAID</h1>
-<p>Le principe du RAID (<i>Redundant Array of Independant Disks</i>) est de grouper plusieurs disques durs physiques pour qu'ils soient traités comme un seul.</p>
+
+## 13) Compression de données
+
+### Codage par plage 
+-	Principe : représente les séquences répétées par une valeur unique suivie de sa fréquence
+-	Exemple AAAAABBB ---> (A, 5) (B, 3)
+-	Utilité : efficace pour les données répétitives
+
+### Codage de longueur Variable
+-	Principe : les symboles fréquents ont des codes courts, les rares des codes longs.
+-	Exemple : A = 0, B = 10, C = 11 pour AABABCC
+
+### Codage de Huffman
+-	Principe : construction d’un arbre binaire basé sur les fréquences des symboles.
+-	Exemple : Fréquences A = 5 , B =7 , C = 10 , D = 15 ---> A=110, B = 111, C=10, D=0 ;
+
+
+## 14) le TAD
+### Définition
+-	Un TAD est une structure de données qui définit un ensemble d’opérations sans spécifier leur implémentation
+-	Il modélise une structure logique indépendante de la manière dont elle est réalisée.
+
+### Exemples
+- Pile (Stack)
+    -	Opérations : push (ajouter), Pop (retirer), Peek (consulter)
+    -	Principe : LIFO (last in, first Out)
+- File (Queue)
+    -	Operations : Enqueue (ajouter), Dequeue(retirer)
+    -	Principe : FIFO (first in , first out)
+
+## 15) Codage de détection d'erreur 
+
+### Principe
+- ajout des bits de redondance à un message pour detecter des erreurs lors de sa transmission
+
+### Augmenter le nombre d'erreurs détectées 
+- ajouter plus de bits de redondance
+- codes avancés : CRC, detecte les erreurs avec des polynômes
+
+### Actions en cas d'erreur
+- redemander la transmission
+- correction d'erreur
+
+## 16) Les disques RAID
+### Principe 
+- RAID ( Redundant Array of Independant Disks) : combinaison de plusieurs disques pour :
+    - Améliorer les performances (vitesse de lecture / ecriture)
+    - Garantir la redondance (tolérance aux pannes
+### Applications des niveaux RAID
+
+
 <p>On distingue 7 types de RAID différents, numérotés de RAID 0 à RAID 6.</p>
 <ul>
   <li>RAID 0 : Utilise au moins deux disques. Il permet d'augmenter la capacité et les vitesses de transfert en répartissant l'information sur les disques. Ce RAID ne permet pas de redondance, il suffit qu'un seul disque tombe en panne pour perdre l'entièreté des données.</li>
