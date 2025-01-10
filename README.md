@@ -4,7 +4,7 @@
 ---
 
 </ul>
-<h1 id="selection-and-insertion-sorts"> les 5 types de Tri </h1>
+## id="selection-and-insertion-sorts"> les 5 types de Tri 
 <h2 id="selection">1) Tri par Selection</h2>
 <p><strong>Principe :</strong>
   *Trouver le plus petit élément du tableau
