@@ -73,6 +73,8 @@
 - Réorganiser le tableau pour que les éléments inférieurs au pivot soient à gauche et les éléments supérieurs à droite.
 - Répéter le processus sur les sous-tableaux à gauche et à droite du pivot.
 
+<p><img src="https://i.ibb.co/K0jQdKP/Capture-d-cran-230.png" alt="enter image description here" width="700"></p>
+
 ### Avantages
 - Très rapide en moyenne (O(n log n)).
 - Bien adapté aux très grandes données.
@@ -83,9 +85,7 @@
 - Non stable.
 
 
-
-
-<h1 id="single-linked-list">5. Single Linked List</h1>
+## 6) Listes simplement chaînées
 <p><strong>Principe :</strong>  Structure de données pouvant contenir plusieurs éléments. Chaque élément possède un pointeur vers l’élément suivant. La liste est un pointeur vers le premier élément de la liste appelé  <strong>“Head”</strong>. Le dernier élément pointe vers une adresse spécifique pour signifier la fin de la liste,  <strong>“Tail”</strong>.</p>
 <p><strong>Avantage :</strong>  Permet de stocker des valeurs de même type, mais a une taille variable même après création. On peut y insérer ou supprimer des éléments.</p>
 <p><strong>Inconvénient :</strong></p>
