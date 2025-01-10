@@ -6,10 +6,11 @@
 </ul>
 <h1 id="selection-and-insertion-sorts"> les 5 types de Tri </h1>
 <h2 id="selection">1) Tri par Selection</h2>
-<p><strong>Principe :</strong>.</p
-  * Trouver le plus petit élément du tableau
+<p><strong>Principe :</strong>
+  *Trouver le plus petit élément du tableau
   * Le placer en première position
   * Répéter le processus pour le reste du tableau
+ .</p
 <p><strong>Avantages:</strong>.</p
   * Facile à comprendre et à coder
   * Nombre d'échange minimal (n-1)
