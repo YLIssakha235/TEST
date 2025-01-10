@@ -117,12 +117,20 @@ On a les trois pointeurs suivants :  <code>*head</code>,  <code>*tail</code>  et
 
 
 
-<h1 id="double-linked-list-and-circular-list">6. Double Linked List and Circular List</h1>
-<h2 id="double-linked-list">6.1 Double Linked List</h2>
-<p><strong>Principe :</strong> Lorsque chaque élément d’une liste pointe à la fois vers l’élément suivant et précédent, nous parlons alors de liste doublement chainée.</p>
+## 7) Listes doublement chaînées
+
+### Principe 
+Lorsque chaque élément d’une liste pointe à la fois vers l’élément suivant et précédent, nous parlons alors de liste doublement chainée.
 <p><img src="https://i.ibb.co/jfpvsHY/Double-linked-list.png" alt="enter image description here"></p>
-<p><strong>Avantages :</strong>  L’accès peut se faire indifféremment dans les deux sens. Cela permet d’opérer une insertion avant ou après un élément, sans nécessairement disposer d’un pointeur sur un voisin, alors qu’une liste simplement chaînée n’autorise une insertion qu’à une seule position par rapport à un élément.</p>
-<p><strong>Inconvénients :</strong>  Cette structure est plus coûteuse en mémoire (un pointeur supplémentaire par élément) et en nombre d’instructions pour la mise à jour : une insertion coûte quatre copies de pointeurs, contre deux dans le cas d’une liste simplement chaînée.</p>
+
+### Avantages :
+- Parcours bidirectionnel
+- Suppression efficace
+- flexibilité accrue
+
+### Inconvénients :
+- Surchage memoire
+
 <h2 id="circular-list">6.2 Circular List</h2>
 <p><strong>Principe :</strong> Une liste cyclique (ou circulaire) est créée lorsque le dernier élément possède une référence vers le premier élément (si la liste est doublement chaînée, alors le premier élément possède aussi une référence vers le dernier). L’utilisation de ce type de liste requiert des précautions pour éviter des parcours infinis, par exemple, lors d’une recherche vaine d’élément.</p>
 <p><img src="https://i.ibb.co/TTnkpK6/Circular-linked-list.png" alt="enter image description here"></p>
