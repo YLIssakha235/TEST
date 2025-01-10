@@ -150,14 +150,27 @@ Une liste circulaire simplement chainée est une liste où:
 - Difficulté à identifier le début
 
 
+## 8) Matrices éparses (Sparse Tables) 
 
-<h1 id="sparse-matrix">7. Sparse Matrix</h1>
-<p><strong>Le problème :</strong>  Ce sont par définition de grands tableaux contenant un grand nombre de cases vides. Un problème de gaspillage de place apparait lorsque l’on essaye de regrouper un grand nombre d’informations et de catégories dans un seul tableau. Toutes les cases ne peuvent être remplies.</p>
-<p><strong>Solutions :</strong></p>
-<ul>
-<li>Une première solution est de diviser la matrice en deux sous matrices. En effet en divisant le problème on va se retrouver avec des sous-matrices moins vides.  Une solution pas vue en cours mais très intéressante est donnée par nos amis <a href="https://youtu.be/V3TAtTtC4Xs?t=251">indiens</a>.</li>
-<li>La deuxième solution, plus complexe, est d’assigner à chaque ligne et colonne un pointeur vers une liste qui peut elle même pointer vers d’autres listes.</li>
-</ul>
+### Problème 
+une matrice éparse est une matrice dans laquelle la majorité des éléments sont des zeros ou des valeurs neutres, cela gaspille de la mémoire et rend les opérations inefficaces.
+
+### Solution 
+L'idée principale est de stocker uniquement les éléments non nuls et leurs indices dans une structure appropriée.
+- listes de triplets : (ligne, colonne, valeur)
+- Dictionnaire : (ligne, colonne)
+
+### Avantages 
+- Reduction significative de l'utilisation mémoire
+- optimisation des opérations sur les valeus pertinentes
+
+### inconvenients
+- Complexité de mise en oeuvre pour certaines méthodes
+- Accès direct moins intuitif comparé à une matrice dense
+  
+
+
+
 <h1 id="stack-and-queue">8. Stack and Queue</h1>
 <p><strong>Principe :</strong> Variante des listes chainées où l’on ne peut ajouter des nouveaux éléments seulement en début ou en fin. Ils possèdent la même structure avec un pointeur vers l’élément suivant dont le dernier pointe vers <code>NULL</code>.</p>
 <ul>
