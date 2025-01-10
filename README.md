@@ -86,12 +86,21 @@
 
 
 ## 6) Listes simplement chaînées
-<p><strong>Principe :</strong>  Structure de données pouvant contenir plusieurs éléments. Chaque élément possède un pointeur vers l’élément suivant. La liste est un pointeur vers le premier élément de la liste appelé  <strong>“Head”</strong>. Le dernier élément pointe vers une adresse spécifique pour signifier la fin de la liste,  <strong>“Tail”</strong>.</p>
-<p><strong>Avantage :</strong>  Permet de stocker des valeurs de même type, mais a une taille variable même après création. On peut y insérer ou supprimer des éléments.</p>
-<p><strong>Inconvénient :</strong></p>
-<ul>
-<li>À nombre d’éléments égal, une liste chaînée occupe  <strong>plus de mémoire</strong>  car elle a besoin de stocker également les pointeurs.</li>
-<li>Pour accéder à un élément d’une liste chaînée, on est obligé de parcourir tous les maillons jusqu’au maillon recherché. Le  <strong>temps d’accès</strong>  est donc d’autant plus grand que l’élément recherché est loin dans la liste.</li>
+### Principe
+Structure de données pouvant contenir plusieurs éléments. Chaque élément possède un pointeur vers l’élément suivant. La liste est un pointeur vers le premier élément de la liste appelé  <strong>“Head”</strong>. Le dernier élément pointe vers une adresse spécifique pour signifier la fin de la liste,  <strong>“Tail”</strong>
+
+### Avantages
+- Fléxibilité dans la taille
+- Ajout et suppression efficaces
+- Utilisation efficace de la mémoire
+
+ ### Inconvenients 
+ - Accès sequentiel
+ - Surcharge mémoire
+ - manipulation comlplexe
+   
+### Ajout et retrait d'un élément
+
 </ul>
 <p><strong>Ajout/suppression d’éléments :</strong><br>
 On a les trois pointeurs suivants :  <code>*head</code>,  <code>*tail</code>  et  <code>*tmp</code></p>
