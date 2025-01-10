@@ -100,20 +100,23 @@ Structure de données pouvant contenir plusieurs éléments. Chaque élément po
  - manipulation comlplexe
    
 ### Ajout et retrait d'un élément
+
 On a les trois pointeurs suivants :  <code>*head</code>,  <code>*tail</code>  et  <code>*tmp</code> 
 
-</ul>
-<p><strong>Ajout/suppression d’éléments :</strong><br>
+- Ajout en debut de la liste : On demande à <code>*tmp</code> de pointer au même endroit que <code>*head</code>. Ensuite <code>*head</code>  de pointer vers le nouvel élément et ce dernier de pointer au même endroit que  <code>*tmp</code>.
+<img src="https://i.ibb.co/GR8jYbB/List-add-first.png" alt="enter image description here">
 
-<ol>
-<li>Ajout en début de liste : on demande à  <code>*tmp</code>  de pointer au même endroit que  <code>*head</code>. Ensuite  <code>*head</code>  de pointer vers le nouvel élément et ce dernier de pointer au même endroit que  <code>*tmp</code>.<br>
-<img src="https://i.ibb.co/GR8jYbB/List-add-first.png" alt="enter image description here"></li>
-<li>Ajout en fin de liste : on fait pointer <code>*tail</code> vers le nouvel élément et ce dernier vers la valeur <code>NULL</code>.<br>
-<img src="https://i.ibb.co/gwKxpT9/List-add-end.png" alt="enter image description here"></li>
-<li>Supression en début de liste : on fait pointer <code>*head</code> vers l’élément juste après.<img src="https://i.ibb.co/wgbFWNs/List-remove-first.png" alt="enter image description here"></li>
-<li>Suppression en fin de liste : comme on n’a pas de pointeur sur l’avant-dernier élément, on va devoir parcourir la liste séquentiellement jusqu’à ce que le prochain élément soit <code>NULL</code>. Ainsi on peut sélectionner l’avant-dernier élément et le faire pointer sur <code>NULL</code>.<br>
-<img src="https://i.ibb.co/p3DDN1s/List-remove-end.png" alt="enter image description here"></li>
-</ol>
+- Ajout en fin de liste : On fait pointer <code>*tail</code> vers le nouvel élément et ce dernier vers la valeur <code>NULL</code>.
+<img src="https://i.ibb.co/gwKxpT9/List-add-end.png" alt="enter image description here">
+
+- Suppression en début de liste : on fait pointer <code>*head</code> vers l’élément juste après.
+<img src="https://i.ibb.co/wgbFWNs/List-remove-first.png" alt="enter image description here">
+
+- Suppression en fin de liste : comme on n’a pas de pointeur sur l’avant-dernier élément, on va devoir parcourir la liste séquentiellement jusqu’à ce que le prochain élément soit <code>NULL</code>. Ainsi on peut sélectionner l’avant-dernier élément et le faire pointer sur <code>NULL</code>.
+<img src="https://i.ibb.co/p3DDN1s/List-remove-end.png" alt="enter image description here">
+
+
+
 <h1 id="double-linked-list-and-circular-list">6. Double Linked List and Circular List</h1>
 <h2 id="double-linked-list">6.1 Double Linked List</h2>
 <p><strong>Principe :</strong> Lorsque chaque élément d’une liste pointe à la fois vers l’élément suivant et précédent, nous parlons alors de liste doublement chainée.</p>
