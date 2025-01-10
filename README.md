@@ -279,6 +279,4 @@ L’implémentation peut se faire avec une liste chaînée ordonnée ou non ou u
 </ul>
 <p>On peut très bien imbriquer un RAID dans un autre. Par exemple, un RAID 0+1 sera un RAID 1 de deux volumes en RAID 0.</p>
 <p>La gestion d'un RAID peut soit être effectuée logiciellement (l'OS se chagre des calculs et du transfert des données), pseudo-matériellement (contrôleur de stockage avec des fonctionnalités avancées) ou matériellement (composant dédié aux calculs et aux transferts).</p>
-<h1 id="bibliography">Bibliography</h1>
-<p>A. LORGE, <em>3BE Structures de données</em>, 2021<br>
-A. LORGE, <a href="https://teams.microsoft.com/_#/school/files/General?threadId=19%3Adad3058aa849416991b553df80365ed6%40thread.tacv2&amp;ctx=channel&amp;context=Recordings&amp;rootfolder=%252Fsites%252F3BEPG3L-L1Projetcopier%252FDocuments%2520partages%252FGeneral%252FRecordings">Teams-Recordings</a>, 2021</p>
+
