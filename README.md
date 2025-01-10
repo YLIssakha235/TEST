@@ -100,10 +100,11 @@ Structure de données pouvant contenir plusieurs éléments. Chaque élément po
  - manipulation comlplexe
    
 ### Ajout et retrait d'un élément
+On a les trois pointeurs suivants :  <code>*head</code>,  <code>*tail</code>  et  <code>*tmp</code> 
 
 </ul>
 <p><strong>Ajout/suppression d’éléments :</strong><br>
-On a les trois pointeurs suivants :  <code>*head</code>,  <code>*tail</code>  et  <code>*tmp</code></p>
+
 <ol>
 <li>Ajout en début de liste : on demande à  <code>*tmp</code>  de pointer au même endroit que  <code>*head</code>. Ensuite  <code>*head</code>  de pointer vers le nouvel élément et ce dernier de pointer au même endroit que  <code>*tmp</code>.<br>
 <img src="https://i.ibb.co/GR8jYbB/List-add-first.png" alt="enter image description here"></li>
