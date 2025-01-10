@@ -150,7 +150,7 @@ Une liste circulaire simplement chainée est une liste où:
 - Difficulté à identifier le début
 
 
-## 8) Matrices éparses (Sparse Tables) 
+## 9) Matrices éparses (Sparse Tables) 
 
 ### Problème 
 une matrice éparse est une matrice dans laquelle la majorité des éléments sont des zeros ou des valeurs neutres, cela gaspille de la mémoire et rend les opérations inefficaces.
@@ -170,6 +170,7 @@ L'idée principale est de stocker uniquement les éléments non nuls et leurs in
   
 
 
+## 9) Matrices éparses (Sparse Tables) 
 
 <h1 id="stack-and-queue">8. Stack and Queue</h1>
 <p><strong>Principe :</strong> Variante des listes chainées où l’on ne peut ajouter des nouveaux éléments seulement en début ou en fin. Ils possèdent la même structure avec un pointeur vers l’élément suivant dont le dernier pointe vers <code>NULL</code>.</p>
